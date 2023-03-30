@@ -1,15 +1,19 @@
-package Lista1;
+package ListaSe;
 
 import javax.swing.*;
 
 public class Atividade8 {
     public static void main(String[] args) {
 
-        float Fah, Celcius = 0;
+        float n1, n2;
 
-        Fah = Float.parseFloat(JOptionPane.showInputDialog("Informe a temperatura em Fahrenheit: "));
-        Celcius = (Fah-32)*5/9;
-
-        JOptionPane.showMessageDialog(null, "A temperatura em Celcius é: "+Celcius+ " °C");
+        n1 = Float.parseFloat(JOptionPane.showInputDialog("Digite primeiro número: "));
+        n2  = Float.parseFloat(JOptionPane.showInputDialog("Digite segundo número: "));
+        if(n1 > n2) {
+            JOptionPane.showMessageDialog(null, n1+" "+n2);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, n2+"  "+n1);
+        }
     }
 }

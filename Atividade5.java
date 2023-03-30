@@ -1,18 +1,23 @@
-package Lista1;
+package ListaSe;
 
 import javax.swing.*;
 
 public class Atividade5 {
     public static void main(String[] args) {
 
-        float Salario, vReajuste, Rejuste, salarioFinal = 0;
+        double n1, n2, media;
 
-        Salario = Float.parseFloat(JOptionPane.showInputDialog("Informe seu Sálario atual: "));
-        vReajuste = Float.parseFloat(JOptionPane.showInputDialog("Informe o percentual de reajuste: "));
+        n1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a primeira nota do aluno: "));
+        n2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a segunda nota do aluno: "));
+        media = (n1+n2)/2;
 
-        Rejuste = Salario * vReajuste/100;
-        salarioFinal = Salario+Rejuste;
-
-        JOptionPane.showMessageDialog(null, "O salario final será de: "+salarioFinal);
+        if (media >= 6) {
+            JOptionPane.showMessageDialog(null, "Media do aluno é: "+media+
+                    "\nAluno Aprovado");
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Media do aluno é: "+media+
+                    "\nAluno Reprovado");
+        }
     }
 }

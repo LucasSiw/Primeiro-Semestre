@@ -1,22 +1,19 @@
-package Lista1;
+package ListaSe;
 
 import javax.swing.*;
 
 public class Atividade7 {
     public static void main(String[] args) {
 
-        double Salario = 0, vtVendas, Comissao = 0, vComissao, sFinal = 0;
-        int quatCarros = 0;
+        float n1, n2;
 
-        Salario = Float.parseFloat(JOptionPane.showInputDialog("Informe o Salário do Funcionario: "));
-        quatCarros = Integer.parseInt(JOptionPane.showInputDialog("Informe a Quantidade de Carros vendidos: "));
-        vtVendas = Float.parseFloat(JOptionPane.showInputDialog("Informe o Valor total das Vendas: "));
-        Comissao = Double.parseDouble(JOptionPane.showInputDialog("Informe a comissão por venda: "));
-
-        vComissao = (Comissao*quatCarros);
-        vComissao = vComissao + (vtVendas*5/100);
-        sFinal = vComissao+Salario;
-
-        JOptionPane.showMessageDialog(null, "O valor final será: "+sFinal);
+        n1 = Float.parseFloat(JOptionPane.showInputDialog("Digite primeiro número: "));
+        n2  = Float.parseFloat(JOptionPane.showInputDialog("Digite segundo número: "));
+        if(n1 > n2) {
+            JOptionPane.showMessageDialog(null, n1+" E maior que "+n2);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, n2+" E maior que "+n1);
+        }
     }
 }

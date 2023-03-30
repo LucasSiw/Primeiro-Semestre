@@ -1,18 +1,23 @@
-package Lista1;
+package ListaSe;
 
 import javax.swing.*;
 
 public class Atividade9 {
     public static void main(String[] args) {
 
-        float Nota1, Nota2, Nota3, Media = 0;
+        float horaTrab, salHora, salario, valorExtra;
 
-        Nota1 = Float.parseFloat(JOptionPane.showInputDialog("Informe a 1°: "));
-        Nota2 = Float.parseFloat(JOptionPane.showInputDialog("Informe a 2°: "));
-        Nota3 = Float.parseFloat(JOptionPane.showInputDialog("Informe a 3°: "));
+        horaTrab = Float.parseFloat(JOptionPane.showInputDialog("Digite quantidade de Horas Trabalhadas: "));
+        salHora = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor por hora trabalhada: "));
 
-        Media = ((Nota1*2)+(Nota2*3)+(Nota3*5))/10;
-
-        JOptionPane.showMessageDialog(null, "A media final do Aluno é: "+Media);
+        if(horaTrab >= 40) {
+            salario = horaTrab * salHora;
+            salario = salHora + (salHora*50/100);
+            JOptionPane.showMessageDialog(null, "O salario do funcionario é: "+salario);
+        }
+        else {
+            salario = horaTrab * salHora;
+            JOptionPane.showMessageDialog(null, "O salario do funcionario é: "+ salario);
+        }
     }
 }
